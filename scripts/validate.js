@@ -10,4 +10,12 @@ document.getElementById('contactForm').addEventListener('submit', function (even
         event.preventDefault();
     }
 
+    if (name.trim() === '' || email.trim() === '' || message.trim() === '') {
+        alert('Por favor, completa todos los campos del formulario.');
+        event.preventDefault();
+    } else if (!email.includes('@')) {
+        alert('Por favor, introduce un correo electrónico válido.');
+        event.preventDefault();
+    }
+
 });
